@@ -1,4 +1,8 @@
-#[Dom manipulation](../readme.md)
+# Dom Manipulation.
+
+[TIlbage](../readme.md).
+
+Kopiér nedenstående template.
 
 ```HTML
 <!DOCTYPE html>
@@ -59,17 +63,17 @@
         
         <h1>Indsæt tekst i boksene.</h1>
 
-        <div id="idBox" class="box box-yellow"><!-- indsæt tekst --></div>
+        <div id="idBox" class="box box-yellow"></div>
 
         <p>Indsæt via QuerySelector og/eller getElementById</p>
 
-        <div id="idBox1" class="box box-red"><!-- indsæt tekst --></div>
-        <div id="idBox2" class="box box-red"><!-- indsæt tekst --></div>
+        <div id="idBox1" class="box box-red"></div>
+        <div id="idBox2" class="box box-red"></div>
 
         <p>Indsæt tekst via QuerySelector og/eller getElementsByClassName</p>
 
-        <div class="box box-green"><!-- indsæt tekst --></div>
-        <div class="box box-green"><!-- indsæt tekst --></div>
+        <div class="box box-green"></div>
+        <div class="box box-green"></div>
 
     </section>
     
