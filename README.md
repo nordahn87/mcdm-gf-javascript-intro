@@ -2,4 +2,4 @@
 
 Test:
 
-[Opgave : GetElements](#events).
+[Opgave : GetElements](./assignments/assignment-dom-manipulation.md).
