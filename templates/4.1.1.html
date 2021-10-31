@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Dom Manipulation</title>
+    </head>
+    <body>
+
+        <h2>Overskrift</h2>
+        
+        <p id="elementId"></p>
+        <p class="text01"></p>
+        <p name="text02"></p>
+        
+        <p class="text"></p>
+        <p class="text"></p>
+        <p class="text"></p>
+        <p class="text"></p>
+        <p class="text"></p>
+
+        <script>
+        
+            let newHeadline = document.getElementsByTagName('h2')[0];
+            newHeadline.innerHTML = 'Ny overskrift';
+        
+            let newTextById = document.getElementById('elementId');
+            newTextById.innerText = 'Ny tekst';
+
+            let newTextByClass = document.getElementsByClassName('text01')[0];
+            newTextByClass.innerText = 'Ny tekst';
+
+            let newTextByName = document.getElementsByName('text02')[0];
+            newTextByName.innerText = 'Ny tekst'
+
+            let newTextByClassNameArray = document.getElementsByClassName('text');
+
+        
+            for(let i = 0; i < newTextByClassNameArray.length; i++) {
+
+                newTextByClassNameArray[i].innerHTML = 'Tekst ' + i + 
+                + ' indsat vi getElementsByClassName og et for loop';
+
+            }
+        
+    
+        </script>
+
+    </body>
+</html>

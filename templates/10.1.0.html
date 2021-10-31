@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>Arrays</title>
+</head>
+<body>
+
+   <div id="output"></div>
+
+        <script>
+
+        let output = document.querySelector('#output');
+        
+        let names = [
+            'Peter', 
+            'Hans', 
+            'Marcus', 
+            'Hanne'
+        ];
+
+        // Udskriver alle elementer i vores Array
+        output.innerHTML += '<p>Names: ' + names + '</p>';
+    
+        // Udskriver det første element i vores array.
+        output.innerHTML += '<p>The first name in the array is: </p>' + names[0];
+
+    </script>
+
+</body>
+</html>

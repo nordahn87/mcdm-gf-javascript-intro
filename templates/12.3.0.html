@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>Løkker</title>
+</head>
+<body>
+
+    <div id="output"></div>
+
+    <script>
+
+        let output = document.querySelector('#output');
+
+        const person = {
+            name: 'Margrethe',
+            surname: 'Alexandrine Þórhildur Ingrid',
+            birthYear: 1940,
+            actualYear: new Date().getFullYear(),
+            age() {
+                return this.actualYear - this.birthYear
+            }
+        }
+
+        for (key in person) {
+
+            output.innerHTML += 'key i person: ' + key + '<br>type:' + typeof person[key] + '<br><br>';
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Funktioner</title>
+    </head>
+    <body>
+        
+        <div id="output"></div>
+
+        <script>
+
+            let output = document.querySelector('#output');
+        
+            function contacts(name, surname, age) {
+
+                output.innerHTML += '<p>' + name + ' ' + surname + ' er ' + age + ' år gammel</p>'
+            
+            }
+        
+            contacts('Hanne', 'Christensen', '22');
+            contacts('Mikkel', 'Hansen', '32');
+            contacts('Peter', 'Jensen', '18');
+            
+        </script>
+    </body>
+</html>

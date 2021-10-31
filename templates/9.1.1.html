@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Struktur</title>
+    </head>
+    <body>
+
+        <div id="output"></div>
+
+        <script>
+
+            let output = document.querySelector('#output');
+
+            let cube = 6;
+
+            switch (cube) {
+                case 1:
+                    output.textContent = 'Du slog 1';
+                    break;
+                case 2:
+                    output.textContent = 'Du slog 2';
+                    break;
+                case 3:
+                    output.textContent = 'Du slog 3';
+                    break;
+                case 4:
+                    output.textContent = 'Du slog 4';
+                    break;
+                case 5:
+                    output.textContent = 'Du slog 5';
+                    break;
+                case 6:
+                    output.textContent = 'Du slog 6';
+                    break;
+                default:
+                    output.textContent = 'Der er sket en fejl';
+                    break;
+            }
+            
+        </script>
+    </body>
+</html>

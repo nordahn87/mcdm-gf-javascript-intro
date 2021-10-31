@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Objekter</title>
+    </head>
+    <body>
+
+        <div id="output"></div>
+
+        <script>
+
+            let output = document.querySelector('#output');
+
+            let person = {
+                name: 'Margrethe',
+                surname: 'Alexandrine Þórhildur Ingrid',
+                birthYear: 1940,
+                actualYear: new Date().getFullYear(),
+                age() {
+                    return this.actualYear - this.birthYear
+                }
+            }
+
+            output.innerHTML ='<div>' + person.name + ' ' + person.surname 
+            + ' (' + + person.age() + ')</div>';
+        
+        </script>
+
+    </body>
+</html>

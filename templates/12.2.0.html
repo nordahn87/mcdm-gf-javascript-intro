@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Løkker</title>
+    </head>
+    <body>
+
+        <div id="output"></div>
+
+        <script>
+
+            let output = document.querySelector('#output');
+
+            let i = 0;
+            let limit = 6;
+            let numbers = [1, 2, 3, 4, 5, 6, 9];
+
+            while(numbers[i] < limit) {
+                 output.innerHTML += numbers[i] + '<br>';
+                i++;
+            }
+        
+        </script>
+
+    </body>
+</html>

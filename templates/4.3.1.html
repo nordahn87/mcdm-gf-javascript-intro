@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>Dom Manipulation</title>
+
+    <style>
+        .red-box {
+            background-color: red;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="output">Output Container</div>
+    
+    <script>
+    
+        let output = document.querySelector('#output');
+        output.textContent = 'Ny tekst i output';
+        output.classList.add('red-box');
+      
+    </script>
+
+</body>
+</html>

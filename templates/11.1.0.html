@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <title>Objekter</title>
+</head>
+<body>
+
+   <div id="output"></div>
+
+    <script>
+
+        let output = document.querySelector('#output');
+
+        let car = {
+            brand: 'BMW',
+            model: 'X8',
+            year: 2017,
+            color: 'red'
+        }
+
+        // Udskriver alle elementer i vores Array
+        
+        output.innerHTML += '<div><b>' + car.brand + '</b>'
+            + '<br/>' + car.model + ' ( ' + car.year + ' ) <br/>color : ' + car.color;
+      
+    </script>
+
+</body>
+</html>
