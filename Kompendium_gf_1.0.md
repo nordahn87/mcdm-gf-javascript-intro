@@ -1123,6 +1123,7 @@ i = 1
 i = 2
 i = 3
 i = 4
+
 i = 5
 i = 6
 i = 7
@@ -1292,10 +1293,6 @@ key i person: age
 type:function
 ```
 
-
-
-
-
 ## 13. Appendix. <a name="appendix"></a>
 
 ### 13.1 Opgaver. <a name="appendix-assignments"></a>
@@ -1309,4 +1306,9 @@ type:function
 Klik maskinen, er vores applikation som vi bygger undervejs, for at bringe de forskellige aspekter af det vi har lært i spil. Det hjælper at se hvordan de forskellige funktionaliteter kan benyttes og det er først når de kombineres at man kan se hvor brugtbart det hele er.
 
 Vi vil vende frem og tilbage til klik maskinen undevejs.
+
+### 13.2.1 Klik maskine - Klik mig, events. <a name="appendix-clickMachine"></a>
+
+...undervej
+
 

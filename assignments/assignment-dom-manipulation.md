@@ -2,6 +2,8 @@
 
 [TIlbage](../readme.md).
 
+Ved hjælp af QuerySelector og/eller getElementById sæt tekst ind i de tomme bokse.
+
 Kopiér nedenstående template.
 
 ```HTML
