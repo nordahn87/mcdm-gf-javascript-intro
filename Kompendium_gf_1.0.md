@@ -1307,6 +1307,8 @@ Klik maskinen, er vores applikation som vi bygger undervejs, for at bringe de fo
 
 Vi vil vende frem og tilbage til klik maskinen undevejs.
 
+[Dokumentation og templates til klik-maskinen](./click-machine/click-machine.md)
+
 ### 13.2.1 Klik maskine - Klik mig, events. <a name="appendix-clickMachine"></a>
 
 ...undervej
