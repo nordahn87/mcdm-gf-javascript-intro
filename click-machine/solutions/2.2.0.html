@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Dom Manipulation</title>
+
+        <style>
+
+            body {
+
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                background-color: slategrey;
+                margin: 0;
+
+            }
+
+            .click-machine-container {
+
+                text-align: center;
+                color: #ffffff;
+
+            }
+
+            .box-container {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;    
+
+            }
+
+            .box {
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                margin: 10px;
+                color: white;
+
+                font-size: 22px;
+                width: 200px;
+                height: 200px;
+
+                border: 2px white solid;
+                border-radius: 100px; 
+
+                user-select: none;
+
+            }
+
+            .box-red {
+                background-color: red;
+            }
+
+            .box-green {
+                background-color: green;
+            }
+
+            .box-yellow {
+                background-color: yellow;
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="click-machine-container">
+            <h1>Klik Maskine</h1>
+            <div class="box-container">
+
+                <div class="box box-red"></div> +
+                <div class="box box-green"></div> =
+                <div class="box box-yellow"></div>
+
+            </div>
+            <div class="action-container">
+                <button class="button">RESET</button>
+            </div>
+        </div>
+
+        <script>
+
+            let boxRedElement = document.querySelector('.box-red');
+            let boxGreenElement = document.querySelector('.box-green');
+            let boxYellowElement = document.querySelector('.box-yellow');
+            let resetButton = document.querySelector('.button');
+
+            let redCount = 0;
+            let greenCount = 0;
+            let yellowResult = 0;
+            
+            // Add Event Listener
+ 
+            boxRedElement.textContent = redCount;
+            boxGreenElement.textContent = greenCount;
+            boxYellowElement.textContent = yellowResult;
+        
+            function countRedBoxClicks() {
+                
+                redCount += 1;
+                boxRedElement.textContent = redCount;
+                printYellowResult();
+            };
+    
+            function countGreenBoxClicks() {
+                
+                greenCount += 1;
+                boxGreenElement.textContent = greenCount;
+                printYellowResult();
+             
+            };
+
+            function printYellowResult() {
+                
+                yellowResult = redCount + greenCount;
+                boxYellowElement.textContent = yellowResult;
+
+            };
+
+            function reset() {
+                
+                greenCount = 0;
+                redCount = 0;
+                boxGreenElement.textContent = greenCount;
+                boxRedElement.textContent = redCount;
+
+                printYellowResult();
+   
+            } 
+
+            boxRedElement.addEventListener('click', countRedBoxClicks);
+            boxGreenElement.addEventListener('click', countGreenBoxClicks);
+            resetButton.addEventListener('click', reset);
+
+        </script>
+    </body>
+</html>

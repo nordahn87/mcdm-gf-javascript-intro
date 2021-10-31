@@ -42,6 +42,7 @@
 13. [Appendix](#appendix) 
     1. [Opgaver](#appendix-assignments) 
     2. [Klik maskine](#appendix-clickMachine) 
+    2. [Andre eksempler og templates](#appendix-examples)
 
 ## 1. Introduktion <a name="introduction"></a>
 
@@ -466,7 +467,19 @@ Vedhjælp af ```outpu.style``` kan vi sætte de forskllige css egenskaber der er
 
 Vi kunne også istedet for at tilføje styles direkte, tilføje ovenstående styling, som en ```class```. Det gør vi ved at benytte output elements ```classList``` som indholder de klasser der er tilføjet og giver os mulighed for at tilføje og fjerne klasser, og sågar undersøge hvorvidt den allerede har en pågældende klasse.
 
+1. add() = Tilføje en klasse.
+2. remove() = Fjerne en klasse
+3. replace() = Erstat en klasse
+4. toggle() = Enten/Eller
+5. contains() = Undsersøg om elementet indeholder en klasse.
+
 Herunder tilføjer vi klasse ```red-box``` som er defineret i vores stylesheet ovenfor.
+
+```javascript
+let output = document.querySelector('#output');
+output.textContent = 'Ny tekst i output';
+output.classList.add('red-box');
+```
 
 Og vi ender med samme resultat som det forrige eksempel.
 
@@ -659,9 +672,9 @@ Vi benytter ovenikøbet ```+=``` så vi sikre os at hvergang vi skriver til vore
 
 Så når vi derefter kalder funktionen 3 gange:
 ```javascript
-    contacts('Hanne', 'Christensen', '22');
-    contacts('Mikkel', 'Hansen', '32');
-    contacts('Peter', 'Jensen', '18');
+contacts('Hanne', 'Christensen', '22');
+contacts('Mikkel', 'Hansen', '32');
+contacts('Peter', 'Jensen', '18');
 ```
 
 Så bliver resultatet som HTML:
@@ -1309,8 +1322,6 @@ Vi vil vende frem og tilbage til klik maskinen undevejs.
 
 [Dokumentation og templates til klik-maskinen](./click-machine/click-machine.md)
 
-### 13.2.1 Klik maskine - Klik mig, events. <a name="appendix-clickMachine"></a>
-
-...undervej
+### 13.3 Eksempler / templates <a name="appendix-examples"></a>
 
 
