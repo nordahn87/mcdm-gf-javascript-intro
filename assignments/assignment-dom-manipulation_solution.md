@@ -2,6 +2,8 @@
 
 [TIlbage](../readme.md).
 
+Ved hjælp af QuerySelector og/eller getElementById sæt tekst ind i de tomme bokse.
+
 Kopiér nedenstående template.
 
 ```HTML
@@ -63,17 +65,20 @@ Kopiér nedenstående template.
         
         <h1>Indsæt tekst i boksene.</h1>
 
-        <div id="idBox" class="box box-yellow"></div>
+        <div id="idBox" class="box box-yellow"><!-- indsæt tekst --></div>
 
         <p>Indsæt via QuerySelector og/eller getElementById</p>
 
-        <div id="idBox1" class="box box-red"></div>
-        <div id="idBox2" class="box box-red"></div>
+        <div id="idBox1" class="box box-red"><!-- indsæt tekst --></div>
+        <div id="idBox2" class="box box-red"><!-- indsæt tekst --></div>
 
         <p>Indsæt tekst via QuerySelector og/eller getElementsByClassName</p>
 
-        <div class="box box-green"></div>
-        <div class="box box-green"></div>
+        <div class="box box-green"><!-- boks 1 --></div>
+        <div class="box box-green"><!-- boks 2 --></div>
+
+        <a href="events_click.html">Events Click 1</a>
+        <a href="events_click_udvidet.html">Events Click Udvidet</a>
 
     </section>
     
@@ -88,6 +93,21 @@ Kopiér nedenstående template.
         let idBoxElement = document.getElementById('idBox');
         idBoxElement.innerText  = 'idBox';
 
+        let idBoxElement1 = document.getElementById('idBox1');
+        idBoxElement1.innerText  = 'idBox1';
+
+        let idBoxElement2 = document.querySelector('#idBox2');
+        idBoxElement2.innerText  = 'idBox2';
+    
+        let greenBoxes = document.getElementsByClassName('box-green');
+        greenBoxes[0].innerText = "box 1";
+        greenBoxes[1].innerText = "box 2";
+
+        // Denne funktionalitet er den samme som ovenfor.
+        // let greenBoxes = document.querySelectorAll('.box-green');
+        // greenBoxes[0].innerText = "box 1";
+        // greenBoxes[1].innerText = "box 2";
+        
     </script>
 
 </body>
