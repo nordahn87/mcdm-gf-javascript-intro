@@ -1312,7 +1312,12 @@ type:function
 
 *Her vil der være en række opgaver som kan tages i brug i forbindelse med tilhørende afsnit. dette er ikke færdiggjort endnu. Og vi vil oftest bruge de tekplates der er i selve komendiet og arbejde udfra dem.*
 
-[Afsnit 4. Dom Manipulation - Get Elements](./assignments/assignment-dom-manipulation.md).
+#### 13.1.1 : Afsnit 4 : Dom manipulation.
+[Dom Manipulation - Get Elements](./assignments/assignment-dom-manipulation.md).  
+
+#### 13.1.2 : Afsnit 7, 8, 9 : Betingelser, events og styling.
+[Intro template](./assignments/assignment-conditions-intro.md).     
+[Opgave Beskrivelse og template](./assignments/assignment-conditions.md).
 
 ### 13.2 Klik maskine (clickMachine). <a name="appendix-clickMachine"></a>
 
