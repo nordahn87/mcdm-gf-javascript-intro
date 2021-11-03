@@ -161,6 +161,20 @@
                     boxRedElement.style.color = 'white';
                     boxRedElement.innerHTML = `${countRed} = Success`;
                     
+                } else if (countRed === 3) {
+
+ 
+                    boxRedElement.style.backgroundColor = 'pink';
+                    boxRedElement.style.color = 'white';
+                    boxRedElement.innerHTML = `${countRed} = Success`;
+                    
+
+                } else {
+
+                    boxRedElement.style.backgroundColor = 'yellow';
+                    boxRedElement.style.color = 'white';
+                    boxRedElement.innerHTML = `${countRed} = Success`;
+                    
                 }
 
             }
