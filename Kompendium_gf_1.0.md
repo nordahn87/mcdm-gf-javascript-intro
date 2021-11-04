@@ -967,7 +967,7 @@ Herunder opretter vi er array med navnet ```names```, og tildeler det 4 indholds
 Nu til et emne som *kan* fovirre rigtig mange, nemlig objekter. Måske har i allerede hørt om OOP
 (objekt-orienteret programmering), og ellers høre i om det nu. Det betyder blot at man tænker object-orienteret. Altså man forsøger at opdele sin kode i objekter de steder hvor det giver mening.
 
-Ofte når man eksemplificere objekter tager man udgangs punkt i en bil, men objekter er som regle noget som kendetegnes ved fælles egenskaber.
+Ofte når man eksemplificere objekter tager man udgangs punkt i en bil, men objekter er som regel noget som kendetegnes ved fælles egenskaber.
 
 Hvis vi ser på en bil som objekt. Så har den som udgangspunkt mange ting tilfælles med alle biler. F.eks har bilen et ```bilmærke```, ```modelnavn```, ```årgang``` og```farve```. Det samme gælder produkter i en web-shop, der handler det om størrelser, farver, priser osv osv. Når et produkt har mange fælles egenskber et det oplagt at vi taler om et objekt, et *produkt objekt*.
 
