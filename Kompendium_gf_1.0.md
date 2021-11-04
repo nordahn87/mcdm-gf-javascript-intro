@@ -964,7 +964,7 @@ Herunder opretter vi er array med navnet ```names```, og tildeler det 4 indholds
 
 # 11. Objekter <a name="objects"></a>
 
-Nu til et emne som *kan* fovirre ritgit mange, nemlig objecter. Måske har i allerede hørt om OOP
+Nu til et emne som *kan* fovirre rigtig mange, nemlig objekter. Måske har i allerede hørt om OOP
 (objekt-orienteret programmering), og ellers høre i om det nu. Det betyder blot at man tænker object-orienteret. Altså man forsøger at opdele sin kode i objekter de steder hvor det giver mening.
 
 Ofte når man eksemplificere objekter tager man udgangs punkt i en bil, men objekter er som regle noget som kendetegnes ved fælles egenskaber.
