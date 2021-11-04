@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates Index</title>
+</head>
+<body>
+    
+    <h1>Templates Index</h1>
+    <ul class="nav-index">
+        
+    </ul>
+
+    <script>
+
+        let list = [
+            '3.1.0', 
+            '3.1.1',
+            '3.2.0',
+            '3.3.0',
+            '3.4.0',
+            '4.1.0_assignment',
+            '4.1.0_assignment_solution',
+            '4.1.1',
+            '4.1.2',
+            '4.2.0',
+            '4.3.0',
+            '4.3.1',
+            '5.1.0',
+            '7.1.0',
+            '8.1.0',
+            '9.1.0',
+            '9.1.1',
+            '10.1.0',
+            '11.1.0',
+            '11.1.1',
+            '12.1.0',
+            '12.2.0',
+            '12.3.0',
+            '../click-machine/templates/index'
+        ];
+
+        let nav = document.querySelector('.nav-index');
+        let tmpl = (item) => `<li><a href='${item}.html'>${item}.html</a></li>`
+
+        list.forEach( (item) => {
+            nav.insertAdjacentHTML('beforeend', tmpl(item) );
+        });
+
+
+    </script>
+
+</body>
+</html>

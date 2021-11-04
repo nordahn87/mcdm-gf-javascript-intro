@@ -1362,7 +1362,9 @@ type:function
 ```
 
 ## 13. Window. <a name="window"></a>
-...todo
+
+
+
 ### 13.1 setInterval. <a name="window-interval"></a>
 ...todo
 ### 13.2 timeout. <a name="window-timeout"></a>
