@@ -153,7 +153,7 @@ Scripts som er i sidens ```<head></head>``` tag vil blive afviklet, inden resten
 ```
 
 ### 3.2.2 JavaScript via fil - Ekstern script. <a name="extern"></a>
-Hvis man kun ønsker at benytte sig af få simple scripts, så kan de sagtens indsættes i én fil evt. sammen med ```HTML``` og ```CSS```. Hvis man derimod har mange eller mere komplicerede scripts, vil det være en fordel at gemme dem i en separat JavaScript fil. Det har den fordel, at adskille koder, tags og sprog fra hinanden. Det resultere i en langt bedre struktur og overblik over sine projekter. Dette kaldes for et eksternt script.
+Hvis man kun ønsker at benytte sig af få simple scripts, så kan de sagtens indsættes i én fil eventuelt sammen med ```HTML``` og ```CSS```. Hvis man derimod har mange eller mere kompliceret scripts, vil det være en fordel at gemme dem i en separat JavaScript fil. Det har den fordel, at adskille koder, tags og sprog fra hinanden. Det resultere i en langt bedre struktur og overblik over sine projekter. Dette kaldes for et eksternt script.
 
 ```HTML 
 <!DOCTYPE html>

@@ -1,5 +1,14 @@
 # Javascript Grundforløb
 
+```
+Media College Denmark
+Javascript Grundforløb
+
+Ansvarlig:
+Anders Christensen 
+anders@medieskolerne.dk
+```
+
 1. [Introduktion](#introduction)
 2. [Referencer, dokumentation](#ref)
 3. [Igang med JavaScript](#igang)
@@ -14,6 +23,7 @@
         1. [Den originale](#original)
         2. [Den moderne](#moderne)
     2. [Udskriv Tekst og Html](#printText)
+        1. [Template Strings/Literals](#printText-template)
     3. [Styling, Classes og Element](#styling)
 5. [Variabler](#variabler)
 6. [Datatyper](#datatyper)
@@ -26,6 +36,8 @@
         1. [Object](#datatyper-specielle-object)
         2. [Array](#datatyper-specielle-array)
 7. [Funktioner](#functions)
+    1. [Hvad er en funktion](#functions-what)
+    1. [Arrow functions](#functions-fat)
 8. [Events](#events)
 9. [Struktur](#structure)
     1. [Aritmetiske Opreatorer](#arrit-opp)
@@ -39,14 +51,15 @@
     1. [For Loop](#loops-for)
     2. [While Loop](#loops-while)
     3. [For-In Loop](#loops-forin)
-13. [Appendix](#appendix) 
+13. [Window](#window)
+14. [Appendix](#appendix) 
     1. [Opgaver](#appendix-assignments) 
     2. [Klik maskine](#appendix-clickMachine) 
     2. [Andre eksempler og templates](#appendix-examples)
 
 ## 1. Introduktion <a name="introduction"></a>
 
-Dette, er kompendium er under udarbejdelse med det formål, at give relevante og brugbare eksempler på hvordan man kan anvende Javascript i forbindelse med udarbejdelsen af dynamiske hjemmesider og applikationer.
+Dette, er kompendium er under evig udarbejdelse men er skabt, med det formål, at give relevante og brugbare eksempler på hvordan man kan anvende Javascript i forbindelse med udarbejdelsen af dynamiske hjemmesider og applikationer.
 
 Vi vil udelukkende komme til, at beskæftige os med det mest basale inden for sproget. Mange af de eksempler i vil blive præsenteret for i starten af dette kompendium, vil i måske ikke kunne se det smarte ved her i første omgang. 
 De har kun til formål at lære os det mest basale og vi vil komme til at arbejde med noget mere brugbart jo længere vi kommer frem i kompendiet. Alt information i denne vil blive fulgt op af undervisning og skal mest betragtes som reference.
@@ -319,8 +332,7 @@ Herunder er to templates som viser det basale. Vi vil arbejde med dem i undervis
         
             for(let i = 0; i < newTextByClassNameArray.length; i++) {
 
-                newTextByClassNameArray[i].innerHTML = 'Tekst ' + i + 
-                + ' indsat vi getElementsByClassName og et for loop';
+                newTextByClassNameArray[i].innerHTML = 'Tekst ' + i + ' indsat vi getElementsByClassName og et for loop';
 
             }
         
@@ -329,7 +341,6 @@ Herunder er to templates som viser det basale. Vi vil arbejde med dem i undervis
 
     </body>
 </html>
-
 ```
 
 ### 4.1.2 Den Moderne. <a name="moderne"></a>
@@ -369,7 +380,7 @@ Herunder er to templates som viser det basale. Vi vil arbejde med dem i undervis
             newTextByQuerySelectorName.innerText = 'Ny tekst'
 
             let newTextByQueryAttribut = document.querySelector('[test="text03"]');
-            newTextByQuerAttribut.innerText = 'Ny tekst'
+            newTextByQueryAttribut.innerText = 'Ny tekst'
 
             let newTextByQuerySelectorAllTexts = document.querySelectorAll('.text');
             newTextByQuerySelectorAllTexts.forEach((element, index) => {
@@ -382,7 +393,6 @@ Herunder er to templates som viser det basale. Vi vil arbejde med dem i undervis
 
     </body>
 </html>
-
 ```
 
 ## 4.2 Udskriv Tekst og Html <a name="printText"></a>
@@ -390,7 +400,7 @@ Herunder er to templates som viser det basale. Vi vil arbejde med dem i undervis
 ***De oftest benyttede metoder*** er via ```textContent```, ```innerText``` og ```innerHTML```.
 For at benytte disse skal man have fat i det eller de elementer man vil skrive til.
 
-```textContent``` benyttes hvis du vil sætte eller hente alt, uanset anvendelse, tekst til eller fra dit element.
+```textContent``` benyttes hvis du vil sætte eller hente alstt, uanset anvendelse, tekst til eller fra dit element.
 ```innerText``` benyttes hvis du vil sætte eller hente ren tekst til eller fra dit element.
 ```innerHTML``` benyttes hvis du vil sætte eller hente HTML formateret indhold til eller fra dit element.
 
@@ -429,6 +439,49 @@ Forventet resultatat:
 ```HTML
 Ny tekst i output
 ```
+
+### 4.2.1 Template Strings/Literals <a name="printText-template"></a> 
+
+Når vi udskriver HTML til DOM benytter vi ofte innerHTML. Vi kunne f.eks. vælge at udskrive en titel således.
+
+```javascript
+let title = 'Fed OVerskrift';
+element.innerHTML = '<h1>' + title + '</h1>'
+```
+
+Resultatet vil blive
+```html
+<h1>Fed OVerskrift</h1>;
+```
+
+Dette kan være en faldgrube for fejl, nå man laver store kompliceret "templates" som man vil udskrive til sit dokument. Når vi begynder at arbejde mere med objekter vil det blive endnu mere tydeligt hvor brugbart og læsbart det er, når man benytter template strings/literals.
+
+Den første store forskel er at "template strings/literals" benytter 
+
+``` 
+Accent-tegnet: `template sting`
+```
+Modsat en admindelig "streng" der benytter 
+``` 
+Enkelt Anførselstegn: 'sting'
+```
+
+Accent-tegnet er demed det tegn der fortæller vores javascript ar vi arbejder med "template strings". Npr vi arbejder med templates strings så kan vi opbygge ovenstående eksempel på en lidt anden facon, som er mere læse venlig og som ikke kræver at du skal placere dine '+' de rigtige steder.
+
+```javascript
+let title = 'Fed OVerskrift';
+element.innerHTML = `<h1>${title}</h1>`
+```
+
+Resultatet vil blive det samme som ovenfor, men nu er det tydeligere hvad der er streng og hvad der er værdi/variabel.
+
+```html
+<h1>Fed OVerskrift</h1>;
+```
+
+På denne måde kan man lave templates der er langt mere læsevenlige og giver os endnu bedre muligheder for at adskille "markup/html" og den logisk kode.
+
+Vi kommer til ar arbejde med begge udgaver løbende.
 
 ## 4.3. Styling, Classes og Element <a name="styling"></a>
 
@@ -663,6 +716,8 @@ Parametre fungerer ligesom variabler, og de kan indeholde forskellige værdier s
     </body>
 </html>
 ```
+
+## 7.2 Arrow function. <a name="functions-arrow"></a>
 
 I ovenståenede eksempel har vi oprettet en ```constacts``` function som tage imod tre paratmeterer. Navne, Efternavn og alder.
 
@@ -967,7 +1022,7 @@ Herunder opretter vi er array med navnet ```names```, og tildeler det 4 indholds
 Nu til et emne som *kan* fovirre rigtig mange, nemlig objekter. Måske har i allerede hørt om OOP
 (objekt-orienteret programmering), og ellers høre i om det nu. Det betyder blot at man tænker object-orienteret. Altså man forsøger at opdele sin kode i objekter de steder hvor det giver mening.
 
-Ofte når man eksemplificere objekter tager man udgangs punkt i en bil, men objekter er som regel noget som kendetegnes ved fælles egenskaber.
+Ofte når man eksemplificere objekter tager man udgangs punkt i en bil, men objekter er som regle noget som kendetegnes ved fælles egenskaber.
 
 Hvis vi ser på en bil som objekt. Så har den som udgangspunkt mange ting tilfælles med alle biler. F.eks har bilen et ```bilmærke```, ```modelnavn```, ```årgang``` og```farve```. Det samme gælder produkter i en web-shop, der handler det om størrelser, farver, priser osv osv. Når et produkt har mange fælles egenskber et det oplagt at vi taler om et objekt, et *produkt objekt*.
 
@@ -1306,20 +1361,29 @@ key i person: age
 type:function
 ```
 
-## 13. Appendix. <a name="appendix"></a>
+## 13. Window. <a name="window"></a>
+...todo
+### 13.1 setInterval. <a name="window-interval"></a>
+...todo
+### 13.2 timeout. <a name="window-timeout"></a>
+...todo
+### 13.3 localStorage. <a name="window-local"></a>
+...todo
 
-### 13.1 Opgaver. <a name="appendix-assignments"></a>
+## 14. Appendix. <a name="appendix"></a>
+
+### 14.1 Opgaver. <a name="appendix-assignments"></a>
 
 *Her vil der være en række opgaver som kan tages i brug i forbindelse med tilhørende afsnit. dette er ikke færdiggjort endnu. Og vi vil oftest bruge de tekplates der er i selve komendiet og arbejde udfra dem.*
 
-#### 13.1.1 : Afsnit 4 : Dom manipulation.
+#### 14.1.0 Opgaver. <a name="appendix-assignments"></a>
 [Dom Manipulation - Get Elements](./assignments/assignment-dom-manipulation.md).  
 
-#### 13.1.2 : Afsnit 7, 8, 9 : Betingelser, events og styling.
+#### 14.1.2 : Afsnit 7, 8, 9 : Betingelser, events og styling.
 [Intro template](./assignments/assignment-conditions-intro.md).     
 [Opgave Beskrivelse og template](./assignments/assignment-conditions.md).
 
-### 13.2 Klik maskine (clickMachine). <a name="appendix-clickMachine"></a>
+### 14.2 Klik maskine (clickMachine). <a name="appendix-clickMachine"></a>
 
 Klik maskinen, er vores applikation som vi bygger undervejs, for at bringe de forskellige aspekter af det vi har lært i spil. Det hjælper at se hvordan de forskellige funktionaliteter kan benyttes og det er først når de kombineres at man kan se hvor brugtbart det hele er.
 
@@ -1327,6 +1391,5 @@ Vi vil vende frem og tilbage til klik maskinen undevejs.
 
 [Dokumentation og templates til klik-maskinen](./click-machine/click-machine.md)
 
-### 13.3 Eksempler / templates <a name="appendix-examples"></a>
-
-
+### 14.3 Eksempler / templates <a name="appendix-examples"></a>
+<!-- #### 14.3.1 <a name="appendix-examples"></a> -->
