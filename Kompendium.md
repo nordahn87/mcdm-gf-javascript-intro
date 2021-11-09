@@ -52,10 +52,14 @@ anders@medieskolerne.dk
     2. [While Loop](#loops-while)
     3. [For-In Loop](#loops-forin)
 13. [Window](#window)
+    1. [setInterval](#window-interval)
+    2. [setTimeout](#window-timeout)
+    3. [localStorage](#window-local)
 14. [Appendix](#appendix) 
     1. [Opgaver](#appendix-assignments) 
     2. [Klik maskine](#appendix-clickMachine) 
-    2. [Andre eksempler og templates](#appendix-examples)
+    3. [Andre eksempler og templates](#appendix-examples)
+
 
 ## 1. Introduktion <a name="introduction"></a>
 
@@ -1364,6 +1368,8 @@ type:function
 ## 13. Window. <a name="window"></a>
 
 ### 13.1 setInterval. <a name="window-interval"></a>
+
+
 
 setInterval er en indbygget javascript funktionalitet som afvikles via window objectet og dermed er global tilgængeligt.
 
