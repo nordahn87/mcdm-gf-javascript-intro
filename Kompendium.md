@@ -1363,14 +1363,69 @@ type:function
 
 ## 13. Window. <a name="window"></a>
 
-
-
 ### 13.1 setInterval. <a name="window-interval"></a>
-...todo
-### 13.2 timeout. <a name="window-timeout"></a>
-...todo
+
+setInterval er en indbygget javascript funktionalitet som afvikles via window objectet og dermed er global tilgængeligt.
+
+Nedenfor ser vi en ```intervalFunction``` (*kunne være hvilken som helst funktion*) bliver kaldt af setInterval hvert 3000´ende millisekund. For at omregne tiden til sekunder skal der divideres med 1000 og således bliver 3000/1000 til 3 sekunder.
+
+```HTML
+function intervalFunction() {
+
+    console.log('Denne funktion bliver kaldt hvert 3. sekund)
+
+}
+
+let interval = setInterval(intervalFunction, 3000);
+```
+
+### 13.2 setTimeout. <a name="window-timeout"></a>
+```HTML
+function timeoutFunction() {
+
+    console.log('Denne funktion bliver kaldt efter 3 sekunder.)
+
+}
+
+let interval = setInterval(timeoutFunction, 3000);
+```
+
 ### 13.3 localStorage. <a name="window-local"></a>
-...todo
+
+Local storage er vores mulighed for at gennem data i clientens browser. Det kunne være en værdi vi gemte for at afgøre hvorvidt brugeren har læst vores "vigtige" besked.
+
+```javascript 
+myStorage = window.localStorage;
+```
+
+Herfra kan du tilføje, fjerne data fra localstorage.
+
+Sæt en værdi (setItem):
+```javascript 
+
+myStorage.setItem('readImportantMessage', true);
+
+```
+Få fat i selvsamme værdi (getItem):
+```javascript 
+
+myStorage.getItem('readImportantMessage');
+
+```
+
+Fjern selvsamme værdi (removeItem):
+```javascript 
+
+myStorage.removeItem('readImportantMessage');
+
+```
+
+Fjern alt localstorage. (clear)
+```javascript 
+
+myStorage.clear();
+
+```
 
 ## 14. Appendix. <a name="appendix"></a>
 
@@ -1387,9 +1442,7 @@ type:function
 
 ### 14.2 Klik maskine (clickMachine). <a name="appendix-clickMachine"></a>
 
-Klik maskinen, er vores applikation som vi bygger undervejs, for at bringe de forskellige aspekter af det vi har lært i spil. Det hjælper at se hvordan de forskellige funktionaliteter kan benyttes og det er først når de kombineres at man kan se hvor brugtbart det hele er.
-
-Vi vil vende frem og tilbage til klik maskinen undevejs.
+Klik maskinen, er en applikation som vi bygger undervejs, for at bringe de forskellige aspekter af det vi har lært i spil.
 
 [Dokumentation og templates til klik-maskinen](./click-machine/click-machine.md)
 
